@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.containerGenerale {
+  position: relative;
+}
+
+.hogwarts {
+  background-image: url("img/hogwarts.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  margin: 5px;
+}
+.rivendell {
+  background-image: url("img/rivendell.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  margin: 5px;
+}
+.bridgeST {
+  background-image: url("img/bridgeST.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  margin: 5px;
+}
+
+.glass{
+  background-color: rgba(255, 255, 255, 0.25);
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  position: absolute;
+}
+
+span{
+  text-align: center;
+  position: absolute;
+
+  /* il centraggio purtroppo l'ho preso da qui https://www.w3schools.com/css/css_align.asp non l'ho capito */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10vw;
+
+  color: White;
+  z-index: 1;
+}
