@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* questo conteiner serve da ancora per i position absolute */
 .containerGenerale {
   position: relative;
 }
@@ -13,7 +14,6 @@
   background-size: cover;
   height: 100vh;
   width: 100vw;
-  z-index: 0;
   margin: 5px;
 }
 .rivendell {
@@ -21,7 +21,6 @@
   background-size: cover;
   height: 100vh;
   width: 100vw;
-  z-index: 0;
   margin: 5px;
 }
 .bridgeST {
@@ -29,7 +28,6 @@
   background-size: cover;
   height: 100vh;
   width: 100vw;
-  z-index: 0;
   margin: 5px;
 }
 
@@ -46,11 +44,9 @@ span{
   position: absolute;
 
   /* il centraggio purtroppo l'ho preso da qui https://www.w3schools.com/css/css_align.asp non l'ho capito */
-  top: 50%;
-  left: 50%;
+  top: 50vh;
+  left: 50vw;
   transform: translate(-50%, -50%);
-  font-size: 10vw;
-
+  font-size: 5vw;
   color: White;
-  z-index: 1;
 }
