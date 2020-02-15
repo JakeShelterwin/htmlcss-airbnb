@@ -4,17 +4,25 @@
   box-sizing: border-box;
 }
 
-/* questo conteiner serve da ancora per i position absolute */
+/* questo container serve da àncora per i position absolute (invece dell'elemto radice html) ci appoggiano il testo e il vetro opaco che copre l'immagine */
 .containerGenerale {
   position: relative;
 }
 
+/* *******************************************++ *//* *******************************************++ */
+/* ***********************************   SEZIONE IMMAGINI     ***********************************++ */
+/* *******************************************++ *//* *******************************************++ */
+
 .hogwarts {
+  /* imposto l'immagine di sfondo */
   background-image: url("img/hogwarts.jpg");
+  /* dico che deve essere tagliata/adattata/espansa ecc per occupare lo spazio indicato da height e width */
   background-size: cover;
+  /* l'immagine (deformata da background-size cover deve occupare il 100% del viewport (la parte visibile della pagina) sia in altezza che in spessore*/
   height: 100vh;
   width: 100vw;
   margin: 5px;
+  /* z-index stabilisce l'importanza "d'apparizione" di un elemento, più basso è il numero meno importante è, quindi gli z-index con un valore più alto possono sovrapporsi a quelli più bassi*/
   z-index: 0;
 }
 .rivendell {
@@ -34,20 +42,29 @@
   z-index: 0;
 }
 
+/* questa classe serve ad aggiungere come un vetro opaco sopra le immagini  */
 .glass{
   background-color: rgba(255, 255, 255, 0.25);
   height: 100vh;
   width: 100vw;
+  /* z-index stabilisce l'importanza "d'apparizione" di un elemento, più basso è il numero meno importante è, quindi gli z-index con un valore più alto possono sovrapporsi a quelli più bassi*/
   z-index: 1;
   position: absolute;
 }
 
-span{
+/* *******************************************++ *//* *******************************************++ */
+/* ***********************************   SEZIONE TESTO     ***********************************++ */
+/* *******************************************++ *//* *******************************************++ */
+
+.testo {
+  /* questa classe serve a centrare il testo come un normale processore word, utile per Plancia Enterprise che ha 2 parole troppo lunghe per stare in una singola riga di testo da 8vw */
   text-align: center;
-  position: absolute;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
+  /* con questi valori centro la scritta rispetto al suo angolo in alto a sinistra, per esempio se ho 2 quadrati uno 100px l'altro al suo interno di 50px con solo questi comandi il quadrato piccolo si ritrova nell'angolo in basso a destra*/
+  top: 50%;
+  left: 50%;
+  /* con trasform translate comando al "quadrato piccolo" di cui sopra, di centrarsi anche rispetto a se stesso "traslando" in questo caso per la metà della sua altezza e larghezza: in questo modo ho individuato il centro del quadrato piccolo e sarà su quello che i comandi top e left avranno effetto, ecco che riesco a centrarlo rispetto al quadrato più grande.*/
+  transform: translate(-50% /* larghezza*/ , -50% /* altezza*/);
   font-size: 8vw;
   color: White;
+  position: absolute;
 }
